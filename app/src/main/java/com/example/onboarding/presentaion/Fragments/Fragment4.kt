@@ -20,9 +20,7 @@ class Fragment4 : Fragment() {
     ): View {
         binding = FragmentFourthBinding.inflate(inflater, container, false)
 
-        binding.bnNext.setOnClickListener {
-            (activity as MainActivity).lastFragment()
-        }
+
 
         return binding.root
     }

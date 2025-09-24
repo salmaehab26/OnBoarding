@@ -21,13 +21,7 @@ class Fragment2 : Fragment() {
     ): View {
         binding = FragmentSecondBinding.inflate(inflater, container, false)
 
-        binding.bnNext.setOnClickListener {
-            (activity as MainActivity).nextPage()
-        }
 
-        binding.bnSkip.setOnClickListener {
-            (activity as MainActivity).skipToEnd()
-        }
 
         return binding.root
 

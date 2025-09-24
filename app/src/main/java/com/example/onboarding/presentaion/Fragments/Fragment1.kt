@@ -20,14 +20,6 @@ class Fragment1 : Fragment() {
     ): View {
         binding = FragmentFirstBinding.inflate(inflater, container, false)
 
-        binding.bnNext.setOnClickListener {
-            (activity as MainActivity).nextPage()
-        }
-
-        binding.bnSkip.setOnClickListener {
-            (activity as MainActivity).skipToEnd()
-        }
-
         return binding.root
 
     }
