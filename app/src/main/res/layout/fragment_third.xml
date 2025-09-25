@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+
     android:backgroundTint="@color/fragmentBackground"
     tools:context=".presentaion.Fragments.Fragment2">
 
     <ImageView
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:layout_marginHorizontal="20dp"
+
         android:src="@drawable/background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +31,7 @@
         app:layout_constraintVertical_bias="0.283" />
 
     <TextView
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +43,8 @@
         app:layout_constraintTop_toBottomOf="@id/imageFrag3" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="أنقل لك كل تحديثات الدوام و أساعدك في تجربتك كموظف و ما راح أقصر معك بوصل صوتك و تقدر تشارك بالتصويت و الاستبيانات معي"
         android:textSize="16dp"
