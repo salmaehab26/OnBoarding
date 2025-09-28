@@ -22,21 +22,24 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val viewPager = binding.viewPager
+
         dotsContainer = binding.dotsContainer
-        viewPager.adapter = ViewPagerAdapter(this, FragmentsList.allFragments)
         createDots(FragmentsList.allFragments.size)
         setCurrentDot(0)
         buttonsAction()
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                setCurrentDot(position)
-                buttonsVisibility(position)
-            }
-        })
+        viewPager()
     }
 
+    fun viewPager(){
+        val viewPager = binding.viewPager
+        viewPager.adapter = ViewPagerAdapter(this, FragmentsList.allFragments)
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+            super.onPageSelected(position)
+            setCurrentDot(position)
+            buttonsVisibility(position)
+        }
+    })}
     private fun createDots(count: Int) {
         dots.clear()
         dotsContainer.removeAllViews()
@@ -69,9 +72,7 @@ class MainActivity : AppCompatActivity() {
 
     fun nextPage() {
         val nextIndex = binding.viewPager.currentItem + 1
-        if (nextIndex < FragmentsList.allFragments.size) {
             binding.viewPager.currentItem = nextIndex
-        }
     }
 
     private fun setCurrentDot(index: Int) {

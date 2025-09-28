@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnBoarding">
         <activity
+            android:name=".presentaion.activity.LogInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentaion.activity.SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentaion.activity.SplashActivityt"
+            android:exported="false" />
+        <activity
             android:name=".presentaion.activity.MainActivity"
             android:exported="true">
             <intent-filter>
