@@ -2,8 +2,8 @@
     <corners android:radius="25dp"/>
     <gradient
         android:type="radial"
-        android:startColor="@color/darkGreen"
-        android:endColor="@color/Green"
+        android:startColor="@color/Green"
+        android:endColor="@color/darkGreen"
         android:gradientRadius="250dp"
   />
 </shape>

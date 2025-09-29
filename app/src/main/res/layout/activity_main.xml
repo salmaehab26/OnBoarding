@@ -35,8 +35,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/Green"
-
+        android:backgroundTint="@color/buttonsColor"
         android:text="التالي"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,7 +62,7 @@
 
         android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/Green"
+        android:backgroundTint="@color/buttonsColor"
         android:text="تسجيل الدخول"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

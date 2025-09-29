@@ -6,11 +6,15 @@
     <color name="darkGray">#F1F2F4</color>
     <color name="fragment1Color">#042021</color>
     <color name="fragmentBackground">#F7FCF9</color>
+    <color name="buttonsColor">#90CBB6</color>
+    <color name="Green">#5CBF91</color>
     <color name="lightGreen">#DBEEE1</color>
     <color name="darkGreen">#205F46</color>
-    <color name="dotSelected">#205F46</color>
-    <color name="dotUnselecteed">#DDDDE3</color>
-    <color name="Green">#90CBB5</color>
+    <color name="dotUnselected">#DDDDE3</color>
+    <color name="dotSelected">#287676</color>
+    <color name="loginBackground">#DAEEE1</color>
     <color name="GreenFirstFragment">#5CBF91</color>
-    <color name="spalshbox">#5CBF91</color>
+    <color name="flagBackground">#D8E7DA</color>
+    <color name="splashBackground">#DBEEE1</color>
+    <color name="textField">#F4F4F6</color>
 </resources>
