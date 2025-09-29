@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
         val sharedPref = getSharedPreferences("sharedPreference", MODE_PRIVATE)
         val isFirstTime = sharedPref.getBoolean("isFirstTime", true)
-                Handler(Looper.getMainLooper()).postDelayed(
+        Handler(Looper.getMainLooper()).postDelayed(
                     {
         if (isFirstTime) {
             startActivity(Intent(this, MainActivity::class.java))
