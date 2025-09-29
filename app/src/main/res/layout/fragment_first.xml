@@ -29,8 +29,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-150dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.25"
+        android:layout_marginTop="-130dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4">
 
@@ -38,22 +39,32 @@
         <View
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="140dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/rounded_view"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:src="@drawable/card_brand_shapes"
+            android:scaleType="fitXY"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageView3"
             android:layout_width="150dp"
-            android:layout_height="248dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:scaleType="fitXY"
             android:src="@drawable/fragment1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tv_name"
@@ -62,7 +73,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="20dp"
             android:text="أنا أمجاد"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/cardView"
             app:layout_constraintTop_toTopOf="@id/cardView" />
@@ -74,7 +85,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="20dp"
             android:text="مستشارة آليه مدعومة بالذكاء الاصطناعي مهمتها الاولى تحسين تجربة الموظف "
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/cardView"
             app:layout_constraintTop_toBottomOf="@id/tv_name" />
