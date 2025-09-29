@@ -1,5 +1,6 @@
 package com.example.onboarding.presentaion.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -12,6 +13,7 @@ import com.example.onboarding.R
 import com.example.onboarding.presentaion.Adapters.ViewPagerAdapter
 import com.example.onboarding.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import androidx.core.content.edit
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -30,16 +32,18 @@ class MainActivity : AppCompatActivity() {
         viewPager()
     }
 
-    fun viewPager(){
+    fun viewPager() {
         val viewPager = binding.viewPager
         viewPager.adapter = ViewPagerAdapter(this, FragmentsList.allFragments)
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-        override fun onPageSelected(position: Int) {
-            super.onPageSelected(position)
-            setCurrentDot(position)
-            buttonsVisibility(position)
-        }
-    })}
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                setCurrentDot(position)
+                buttonsVisibility(position)
+            }
+        })
+    }
+
     private fun createDots(count: Int) {
         dots.clear()
         dotsContainer.removeAllViews()
@@ -72,7 +76,7 @@ class MainActivity : AppCompatActivity() {
 
     fun nextPage() {
         val nextIndex = binding.viewPager.currentItem + 1
-            binding.viewPager.currentItem = nextIndex
+        binding.viewPager.currentItem = nextIndex
     }
 
     private fun setCurrentDot(index: Int) {
@@ -101,6 +105,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun lastFragment() {
-        Snackbar.make(binding.root, "Finish", Snackbar.LENGTH_LONG).show()
+        val sharedPref = getSharedPreferences("sharedPreference", MODE_PRIVATE)
+        sharedPref.edit { putBoolean("isFirstTime", false) }
+        val intent = Intent(this, LogInActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

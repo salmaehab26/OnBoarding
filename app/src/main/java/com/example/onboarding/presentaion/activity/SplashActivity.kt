@@ -18,11 +18,17 @@ class SplashActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding= ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Handler(Looper.getMainLooper()).postDelayed(
-            {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+        val sharedPref = getSharedPreferences("sharedPreference", MODE_PRIVATE)
+        val isFirstTime = sharedPref.getBoolean("isFirstTime", true)
+                Handler(Looper.getMainLooper()).postDelayed(
+                    {
+        if (isFirstTime) {
+            startActivity(Intent(this, MainActivity::class.java))
+        } else {
+            startActivity(Intent(this, LogInActivity::class.java))
+        }
+
+        finish()
             }, 3000
         )
     }
