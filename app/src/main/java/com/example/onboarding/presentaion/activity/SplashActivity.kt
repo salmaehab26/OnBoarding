@@ -32,6 +32,6 @@ class SplashActivity : AppCompatActivity() {
         finish()
             }, 3000
         )
-        Log.d("Splash","ok")
+        Log.d("Splash","done")
     }
 }
