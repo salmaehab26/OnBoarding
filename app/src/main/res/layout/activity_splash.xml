@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Green"
+    android:background="@color/splashBackground"
     tools:context=".presentaion.activity.SplashActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_percent="0.17"
         android:src="@drawable/splash_bottom_shapes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -19,8 +19,8 @@
     android:id="@+id/view"
     android:layout_width="0dp"
     android:layout_height="0dp"
-    app:layout_constraintHeight_percent="0.25"
-    app:layout_constraintWidth_percent="0.45"
+    app:layout_constraintHeight_percent="0.16"
+    app:layout_constraintWidth_percent="0.35"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +29,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintTop_toTopOf="@id/view"
         app:layout_constraintEnd_toEndOf="@id/view"
         app:layout_constraintStart_toStartOf="@id/view"
         android:src="@drawable/fragment1"
