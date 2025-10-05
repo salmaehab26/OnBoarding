@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class ViewPagerAdapter(
+class FragmentViewPagerAdapter(
     activity: AppCompatActivity,
     private val fragments: List<Fragment>
 ) : FragmentStateAdapter(activity) {

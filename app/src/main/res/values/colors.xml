@@ -17,4 +17,9 @@
     <color name="flagBackground">#D8E7DA</color>
     <color name="splashBackground">#DBEEE1</color>
     <color name="textField">#F4F4F6</color>
+    <color name="nav_select">#A70751</color>
+
+
+
+
 </resources>

@@ -10,9 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.onboarding.presentaion.Fragments.FragmentsList
 import com.example.onboarding.R
-import com.example.onboarding.presentaion.Adapters.ViewPagerAdapter
+import com.example.onboarding.presentaion.Adapters.FragmentViewPagerAdapter
 import com.example.onboarding.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.Snackbar
 import androidx.core.content.edit
 
 class MainActivity : AppCompatActivity() {
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     fun viewPager() {
         val viewPager = binding.viewPager
-        viewPager.adapter = ViewPagerAdapter(this, FragmentsList.allFragments)
+        viewPager.adapter = FragmentViewPagerAdapter(this, FragmentsList.allFragments)
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -93,16 +92,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.bnSkip.setOnClickListener {
-            skipToEnd()
+          startActivity(Intent(this, LogInActivity::class.java))
         }
         binding.bnSignIn.setOnClickListener {
             lastFragment()
         }
     }
 
-    fun skipToEnd() {
-        binding.viewPager.currentItem = FragmentsList.allFragments.size - 1
-    }
+
 
     fun lastFragment() {
         val sharedPref = getSharedPreferences("sharedPreference", MODE_PRIVATE)

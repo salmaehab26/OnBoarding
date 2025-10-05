@@ -40,12 +40,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rounded_text_field"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusTopEnd="10dp"
+        app:boxBackgroundMode="none"
         app:boxStrokeWidth="0dp"
-        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintWidth_percent="0.6">
@@ -53,9 +54,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:hint=" الاسم بالكامل"
-            android:inputType="phone"
+            android:paddingVertical="12dp"
+            android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,7 +74,7 @@
         app:ccp_showNameCode="false"
         app:ccp_showPhoneCode="true"
         app:layout_constraintEnd_toStartOf="@id/tilPhone"
-        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilName"
         app:layout_constraintWidth_percent="0.3" />
@@ -83,19 +85,20 @@
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        app:boxBackgroundMode="none"
         android:background="@drawable/rounded_shape"
         app:boxStrokeWidth="0dp"
         app:layout_constraintBottom_toBottomOf="@id/ccp"
-        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toEndOf="@+id/ccp"
         app:layout_constraintTop_toBottomOf="@id/tilName"
         app:layout_constraintWidth_percent="0.6">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPhone"
-
+            android:paddingVertical="12dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:hint="رقم الهاتف"
             android:inputType="phone"
             android:textSize="20sp" />
@@ -110,8 +113,9 @@
         android:background="@drawable/rounded_text_field"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusTopEnd="10dp"
+        app:boxBackgroundMode="none"
         app:boxStrokeWidth="0dp"
-        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilPhone"
         app:layout_constraintWidth_percent="0.6">
@@ -119,9 +123,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
             android:hint="البريد الالكتروني "
-            android:inputType="phone"
+            android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 

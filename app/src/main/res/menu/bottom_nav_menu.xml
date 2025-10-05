@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_fragment_icon"
+        android:title="" />
+
+    <item
+        android:id="@+id/offersFragment"
+        android:icon="@drawable/offers_fragment_icon"
+        android:title="" />
+
+    <item
+        android:id="@+id/vendorsFragment"
+        android:icon="@drawable/vendors_fragment_icon"
+        android:title="" />
+    <item
+    android:id="@+id/newsFragment"
+    android:icon="@drawable/news_fragment_icon"
+    android:title="" />
+
+    <item
+    android:id="@+id/consultantFragment"
+    android:icon="@drawable/myconsultant_fragment_icon"
+    android:title="" />
+
+</menu>

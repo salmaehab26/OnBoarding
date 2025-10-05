@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.example.onboarding.presentaion.Fragments.OffersFragment"
+        android:label="Search" />
+
+    <fragment
+        android:id="@+id/vendorsFragment"
+        android:name="com.example.onboarding.presentaion.Fragments.VendorsFragment"
+        android:label="Profile" />
+
+    <fragment
+    android:id="@+id/newsFragment"
+    android:name="com.example.onboarding.presentaion.Fragments.NewsFragment"
+    android:label="Profile" />
+    <fragment
+    android:id="@+id/consultantFragment"
+    android:name="com.example.onboarding.presentaion.Fragments.ConsultantFragment"
+    android:label="Profile" />
+
+</navigation>

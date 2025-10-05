@@ -40,9 +40,12 @@ android {
 
 dependencies {
     implementation("com.googlecode.libphonenumber:libphonenumber:8.13.20")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("com.hbb20:ccp:2.7.3")
     implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

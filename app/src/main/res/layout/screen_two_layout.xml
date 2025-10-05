@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/card_border"
+        android:elevation="10dp"
+        android:layoutDirection="rtl"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerBoxes"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toTopOf="@id/dotsContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/dotsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewPagerBoxes" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="225dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card2"
+        app:layout_constraintWidth_percent="0.9">
+
+
+        <View
+            android:id="@+id/cardBackground"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/rounded_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/card_brand_shapes"
+            app:layout_constraintBottom_toBottomOf="@id/cardBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardBackground"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView3"
+            android:layout_width="140dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fragment1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:text="أنا أمجاد جرب تستشيرني"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/imageView3"
+            app:layout_constraintTop_toTopOf="@id/cardBackground" />
+
+        <TextView
+            android:id="@+id/tv_sub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:text="مستشارة مدعومة بالذكاء الاصطناعي"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView3"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="#1C1E44"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="استشاره اسريه"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            app:layout_constraintEnd_toEndOf="@id/view1"
+            app:layout_constraintStart_toStartOf="@id/view1"
+            app:layout_constraintTop_toTopOf="@id/view1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="#1C1E44"
+            app:layout_constraintEnd_toStartOf="@id/view1"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="استشاره مهنية"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/view2"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintTop_toTopOf="@id/view2" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="#1C1E44"
+            app:layout_constraintEnd_toStartOf="@id/view2"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="استشاره رياضة"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/view3"
+            app:layout_constraintEnd_toEndOf="@id/view3"
+            app:layout_constraintStart_toStartOf="@id/view3"
+            app:layout_constraintTop_toTopOf="@id/view3" />
+        <View
+            android:id="@+id/view4"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="#1C1E44"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="استشاره مالية"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/view4"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toStartOf="@id/view4"
+            app:layout_constraintTop_toTopOf="@id/view4" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="#1C1E44"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@id/view1"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="استشاره مجتمعيه"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/view5"
+            app:layout_constraintEnd_toEndOf="@id/view5"
+            app:layout_constraintStart_toStartOf="@id/view5"
+            app:layout_constraintTop_toTopOf="@id/view5" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="#1C1E44"
+            app:layout_constraintEnd_toStartOf="@id/view2"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="استشاره نفسيه"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/view6"
+            app:layout_constraintEnd_toEndOf="@id/view6"
+            app:layout_constraintStart_toStartOf="@id/view6"
+            app:layout_constraintTop_toTopOf="@id/view6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,15 +19,26 @@ class LogInActivity : AppCompatActivity() {
         setContentView(binding.root)
         val sharedPref = getSharedPreferences("sharedPreference", MODE_PRIVATE)
         binding.bnSignIn.setOnClickListener {
-            val phoneNumber =sharedPref.getString("phoneNubmer",null)
+            val phone = binding.etPhone.text.toString()
+            val fullNumber=binding.ccp.selectedCountryCode+phone
 
-            if (phoneNumber != null) {
+            val users = sharedPref.getStringSet("users", mutableSetOf())
+            if (phone.isNotEmpty()&& binding.etPassword.text.toString().isNotEmpty()) {
+            if (users != null && users.contains(fullNumber)) {
+                Toast.makeText(this, "تم تسجيل الدخول بنجاح ", Toast.LENGTH_SHORT).show()
+                sharedPref.edit()
+                    .putBoolean("isLoggedIn", true)
+                    .apply()
+
                 startActivity(Intent(this, HomeActivity::class.java))
+                finish()
             } else {
-                Toast.makeText(this, "No account found! Please Sign Up first.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "لا يوجد حساب الرجاء انشاء حساب اولا", Toast.LENGTH_SHORT).show()
             }
+        }else {
+                Toast.makeText(this, "ادخل رقم الهاتف و كلمة المرور", Toast.LENGTH_SHORT).show()
 
-        }
+            }}
 
         binding.createAccount.setOnClickListener { startActivity(
             Intent(

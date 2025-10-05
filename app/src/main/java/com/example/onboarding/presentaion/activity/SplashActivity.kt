@@ -21,12 +21,18 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
         val sharedPref = getSharedPreferences("sharedPreference", MODE_PRIVATE)
         val isFirstTime = sharedPref.getBoolean("isFirstTime", true)
+        val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
+
         Handler(Looper.getMainLooper()).postDelayed(
                     {
         if (isFirstTime) {
             startActivity(Intent(this, MainActivity::class.java))
         } else {
-            startActivity(Intent(this, LogInActivity::class.java))
+            if (isLoggedIn) {
+                startActivity(Intent(this, HomeActivity::class.java))
+            } else {
+                startActivity(Intent(this, LogInActivity::class.java))
+            }
         }
 
         finish()
